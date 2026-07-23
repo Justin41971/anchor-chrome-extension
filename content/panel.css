@@ -19,8 +19,17 @@
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:bold;
+
+    font-size:20px;
+
 }
 
 .stat {
@@ -68,4 +77,63 @@
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+/* Anchor logo */
+.anchor-logo {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+
+/* Pause confirmation screen */
+
+#pause-screen {
+
+    position: fixed;
+
+    top: 80px;
+
+    right: 20px;
+
+    width: 340px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+    font-family: Arial, sans-serif;
+
+    z-index: 1000000;
+
+    padding: 20px;
+
+    text-align: center;
+
+    animation: slideIn .3s ease;
+
+}
+
+
+.pause-logo {
+
+    width: 40px;
+
+    height: 40px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* Hide elements */
+
+.hidden {
+
+    display: none;
+
 }

@@ -18,7 +18,12 @@ if (isCheckoutPage) {
   fetch(chrome.runtime.getURL("content/panel.html"))
     .then(response => response.text())
     .then(html => {
-      const wrapper = document.createElement("div");
+
+      if (document.getElementById("anchor-panel")) {
+        return;
+      }
+
+    const wrapper = document.createElement("div");
       wrapper.innerHTML = html;
       document.body.appendChild(wrapper);
 
