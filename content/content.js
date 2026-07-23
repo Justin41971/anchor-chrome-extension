@@ -1,4 +1,4 @@
-// Keywords that usually indicate checkout pages
+// keywords bang bang bang buzzwords
 const checkoutKeywords = [
     "checkout",
     "cart",
@@ -28,7 +28,7 @@ if (!isCheckoutPage) {
             .then(response => response.text())
             .then(html => {
 
-                // Create wrapper
+                // wrapper
                 const wrapper = document.createElement("div");
                 wrapper.innerHTML = html;
 

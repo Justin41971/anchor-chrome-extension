@@ -1,4 +1,4 @@
-/* Anchor font settings */
+/* anchor font */
 #anchor-panel,
 #anchor-panel *,
 #pause-screen,
@@ -7,7 +7,7 @@
 }
 
 
-/* Main Anchor Panel */
+/* anchor panel */
 
 #anchor-panel {
     position: fixed;
