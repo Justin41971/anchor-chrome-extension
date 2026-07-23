@@ -1,4 +1,138 @@
+/* Anchor font settings */
+#anchor-panel,
+#anchor-panel *,
+#pause-screen,
+#pause-screen * {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* Main Anchor Panel */
+
 #anchor-panel {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 340px;
+    background: #d1f0ff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    z-index: 999999;
+    padding: 20px;
+    animation: slideIn .3s ease;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* ONLY the Anchor brand name */
+
+.logo span,
+#anchor-panel .logo span {
+    font-family: Georgia, "Times New Roman", serif !important;
+}
+
+
+.anchor-logo {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Close button */
+
+#close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+#close:hover {
+    color: black;
+}
+
+
+/* Heading */
+
+#anchor-panel h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* Information cards */
+
+.stat {
+    background: #9be3ff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 12px;
+    line-height: 1.4;
+}
+
+
+/* Pause button */
+
+.pause {
+    width: 100%;
+    margin-top: 20px;
+    background: #74bcff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.pause:hover {
+    background: #0374dd;
+}
+
+
+/* Continue button */
+
+.continue {
+    width: 100%;
+    margin-top: 10px;
+    background: #f8f9f9;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.continue:hover {
+    background: #dddddd;
+}
+
+
+/* Pause confirmation screen */
+
+#pause-screen {
     position: fixed;
     top: 80px;
     right: 20px;
@@ -6,68 +140,40 @@
     background: white;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    font-family: Arial, sans-serif;
-    z-index: 999999;
-    padding: 20px;
+    z-index: 1000000;
+    padding: 30px;
+    text-align: center;
     animation: slideIn .3s ease;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.pause-logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
 }
 
-.logo {
 
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    font-weight:bold;
-
-    font-size:20px;
-
+#pause-screen h2 {
+    margin: 10px 0;
 }
 
-.stat {
-    background: #f5f5f5;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 15px;
+
+#pause-screen p {
+    color: #666;
+    line-height: 1.5;
 }
 
-.pause {
-    width: 100%;
-    margin-top: 20px;
-    background: #00796b;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
+
+.hidden {
+    display: none;
 }
 
-.continue {
-    width: 100%;
-    margin-top: 10px;
-    background: #eeeeee;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-}
 
-#close {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-}
+/* Animation */
 
 @keyframes slideIn {
+
     from {
         transform: translateX(100%);
         opacity: 0;
@@ -77,63 +183,5 @@
         transform: translateX(0);
         opacity: 1;
     }
-}
-
-/* Anchor logo */
-.anchor-logo {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 6px;
-}
-
-
-/* Pause confirmation screen */
-
-#pause-screen {
-
-    position: fixed;
-
-    top: 80px;
-
-    right: 20px;
-
-    width: 340px;
-
-    background: white;
-
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.2);
-
-    font-family: Arial, sans-serif;
-
-    z-index: 1000000;
-
-    padding: 20px;
-
-    text-align: center;
-
-    animation: slideIn .3s ease;
-
-}
-
-
-.pause-logo {
-
-    width: 40px;
-
-    height: 40px;
-
-    margin-bottom: 10px;
-
-}
-
-
-/* Hide elements */
-
-.hidden {
-
-    display: none;
 
 }

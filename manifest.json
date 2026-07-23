@@ -1,26 +1,23 @@
 {
   "manifest_version": 3,
+
   "name": "Anchor",
-  "description": "Intentional Shopping Assistant",
   "version": "1.0",
 
+  "description": "A mindful shopping assistant that helps you pause before purchasing.",
+
   "permissions": [
-    "storage",
-    "activeTab"
+    "storage"
   ],
 
   "host_permissions": [
-    "<all_urls>"
+    "*://*/*"
   ],
-
-  "background": {
-    "service_worker": "background/background.js"
-  },
 
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "*://*/*"
       ],
       "js": [
         "content/content.js"
@@ -36,19 +33,19 @@
     {
       "resources": [
         "content/panel.html",
-        "content/panel.js",
-        "content/panel.css",
-        "icons/icon16.png"
+        "icons/icon16.png",
+        "icons/icon48.png",
+        "icons/icon128.png"
       ],
       "matches": [
-        "<all_urls>"
+        "*://*/*"
       ]
     }
   ],
 
   "icons": {
     "16": "icons/icon16.png",
-    "48": "icons/icon16.png",
-    "128": "icons/icon16.png"
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }
